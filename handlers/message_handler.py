@@ -1,8 +1,8 @@
 from aiogram import types
 from aiogram.filters import CommandStart
-from ..openai_module.gpt_service import generate_response
-from ..knowledge_base.rag_service import get_context_for_query
-from ..config import PRODUCT_BOT_USERNAME, LANDING_PAGE_URL, PROJECT_NAME
+from openai_module.gpt_service import generate_response
+from knowledge_base.rag_service import get_context_for_query
+from config import PRODUCT_BOT_USERNAME, LANDING_PAGE_URL, PROJECT_NAME
 
 # Load the knowledge base content once
 KB_CONTENT = get_context_for_query("")
