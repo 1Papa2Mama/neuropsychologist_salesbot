@@ -18,5 +18,5 @@ PORT = os.getenv("PORT", 8080)
 
 # Project specific constants
 PRODUCT_BOT_USERNAME = "@Digita1_Psychology_Bot"
-LANDING_PAGE_URL = https://t.me/Digita1_Psychology_Bot
+LANDING_PAGE_URL = "https://t.me/Digita1_Psychology_Bot"
 PROJECT_NAME = "Нейропсихолог"
