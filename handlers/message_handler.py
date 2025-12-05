@@ -42,8 +42,10 @@ async def text_message_handler(message: types.Message):
     # 1. Анализ вопроса (Implicit in LLM prompt)
     # 2. Поиск нужной информации в базе знаний (RAG-logic)
     # 3. Формирование контекста (KB_CONTENT is the context)
-    # 4. Отправка запроса в GPT и 5. Создание красивого живого ответа
-    response_text = generate_response(user_query, KB_CONTENT)
+    # 4. Отправка запроса в GPT и Формирование ответа
+await message.bot.send_chat_action(message.chat.id, "typing")  # Бот печатает...
 
-    # 6. Предложение перейти в @Digita1_Psychology_Bot (Implicit in GPT response via system prompt)
-    await message.answer(response_text)
+response_text = generate_response(user_query, KB_CONTENT)
+
+# 6. Ответ пользователю
+await message.answer(response_text, parse_mode="Markdown")
