@@ -30,7 +30,7 @@ async def start_command_handler(message: types.Message):
 
 Чтобы начать, просто опиши свою проблему, вопрос или то, что тебя беспокоит. Я здесь, чтобы помочь!
 """
-    await message.answer(welcome_message, parse_mode="Markdown")
+    await message.answer(welcome_message)
 
 async def text_message_handler(message: types.Message):
     """
@@ -46,4 +46,4 @@ async def text_message_handler(message: types.Message):
     response_text = generate_response(user_query, KB_CONTENT)
 
     # 6. Предложение перейти в @Digita1_Psychology_Bot (Implicit in GPT response via system prompt)
-    await message.answer(response_text, parse_mode="Markdown")
+    await message.answer(response_text)
