@@ -17,6 +17,6 @@ OPENAI_API_KEY = os.getenv(
 PORT = os.getenv("PORT", 8080)
 
 # Project specific constants
-PRODUCT_BOT_USERNAME = "https://t.me/Digita1_Psychology_Bot"
+PRODUCT_BOT_USERNAME = "Digita1_Psychology_Bot"
 LANDING_PAGE_URL = "https://digipsyland-mrufvje5.manus.space"
 PROJECT_NAME = "Нейропсихолог"
