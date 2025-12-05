@@ -3,7 +3,7 @@ import logging
 from aiogram import Bot, Dispatcher
 from aiogram.filters import CommandStart
 from aiogram.types import Message
-from .config import TELEGRAM_TOKEN, PORT
+from config import TELEGRAM_TOKEN, PORT
 from .handlers.message_handler import start_command_handler, text_message_handler
 
 # Configure logging
