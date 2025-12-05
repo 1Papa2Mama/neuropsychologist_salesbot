@@ -1,7 +1,7 @@
 import os
 
 # The knowledge base file is assumed to be in the parent directory
-KB_FILE_PATH = os.path.join(os.path.dirname(__file__), '..', '..', 'knowledge_base', 'neuropsychologist_kb.md')
+KB_FILE_PATH = os.path.join(os.path.dirname(__file__), "neuropsychologist_kb.md")
 
 def load_knowledge_base() -> str:
     """
