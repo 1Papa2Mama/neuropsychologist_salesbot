@@ -25,12 +25,12 @@ async def start_command_handler(message: types.Message):
 ✨ Мягко мотивирую тебя улучшать свою жизнь.
 
 Готов начать?
-🔹 Продукт-бот: @{PRODUCT_BOT_USERNAME}
+🔹 Продукт-бот: {PRODUCT_BOT_USERNAME}
 🔹 Лэндинг: {LANDING_PAGE_URL}
 
 Чтобы начать — просто опиши свою проблему или вопрос. Я рядом 🙂
 """
-    await message.answer(welcome_message, parse_mode="Markdown")
+    await message.answer(welcome_message)
 
 
 # -------------------------------
@@ -48,4 +48,4 @@ async def text_message_handler(message: types.Message):
     response_text = generate_response(user_query, KB_CONTENT)
 
     # 4. Отправляем ответ
-    await message.answer(response_text, parse_mode="Markdown")
+    await message.answer(response_text)
