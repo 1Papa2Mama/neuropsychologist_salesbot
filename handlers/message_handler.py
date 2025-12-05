@@ -10,9 +10,8 @@ KB_CONTENT = get_context_for_query("")
 async def start_command_handler(message: types.Message):
     """
     Handles the /start command.
-    Implements the required warm greeting, project description,
-    benefit explanation, links, and invitation to describe the problem.
     """
+
     welcome_message = f"""
 👋 Привет! Я — твой дружелюбный ИИ-консультант проекта «{PROJECT_NAME}»!
 
@@ -31,7 +30,8 @@ async def start_command_handler(message: types.Message):
 Чтобы начать, просто опиши свою проблему, вопрос или то, что тебя беспокоит. Я здесь, чтобы помочь!
 """
 
-await message.answer(welcome_message, parse_mode="Markdown")
+    # ВАЖНО: эта строка должна быть ВНУТРИ функции и ПОСЛЕ welcome_message
+    await message.answer(welcome_message, parse_mode="Markdown")
 
 async def text_message_handler(message: types.Message):
     """
