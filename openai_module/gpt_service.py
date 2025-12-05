@@ -1,6 +1,6 @@
 import os
 from openai import OpenAI
-from ..config import OPENAI_API_KEY, PRODUCT_BOT_USERNAME, LANDING_PAGE_URL, PROJECT_NAME
+from config import ... OPENAI_API_KEY, PRODUCT_BOT_USERNAME, LANDING_PAGE_URL, PROJECT_NAME
 
 # Initialize the OpenAI client
 # The base_url is pre-configured in the sandbox environment for the supported models.
